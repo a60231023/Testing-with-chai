@@ -2,7 +2,10 @@ const mongoose = require("mongoose");
 
 const connectToDb = () => {
   mongoose
-    .connect(process.env.MONGODB_URL)
+    .connect(process.env.MONGODB_URL, {
+        useNewUrlParser: true,
+        useUnifiedTopology: true
+    })
     .then((conn) => {
       console.log(`connected to databse ${conn.connection.host}`);
     })
