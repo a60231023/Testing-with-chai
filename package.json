@@ -1,0 +1,19 @@
+{
+  "name": "y",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/a60231023/Testing-with-chai.git"
+  },
+  "author": "ayush tiwari",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/a60231023/Testing-with-chai/issues"
+  },
+  "homepage": "https://github.com/a60231023/Testing-with-chai#readme"
+}
