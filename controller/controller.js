@@ -57,7 +57,7 @@ const getSingleUser = async (req, res) => {
         console.log(query);
         const singleUser = await User.findOne(query);
         if(!singleUser){
-            res.status(400).json({
+            res.status(401).json({
                 message: "user not found"
             });
         }
