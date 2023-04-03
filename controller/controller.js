@@ -50,8 +50,34 @@ const getAllUser = async (req, res) => {
   }
 };
 
+const getSingleUser = async (req, res) => {
+    try {
+        //while querying you have to do it like this 
+        const userId = {_id:req.params.id};
+        console.log(userId);
+        const singleUser = await User.findOne(userId);
+        if(!singleUser){
+            res.status(400).json({
+                message: "user not found"
+            });
+        }
+        res.status(200).json({
+            singleUser
+        });
+
+
+    } catch (error) {
+        res.status(404).json({
+            message:error,
+            value: "user not found"
+        });
+    }
+};
+
+
 module.exports = {
   hello,
   register,
   getAllUser,
+  getSingleUser
 };
