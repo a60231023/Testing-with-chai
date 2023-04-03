@@ -7,4 +7,6 @@ router.get("/getAllUser", controller.getAllUser);
 router.get("/getSingleUser/:id", controller.getSingleUser);
 router.delete("/deleteUser/:id", controller.deleteUser);
 router.put("/updateUser/:id", controller.updateUser);
+
+
 module.exports = router;
