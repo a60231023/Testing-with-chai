@@ -53,9 +53,9 @@ const getAllUser = async (req, res) => {
 const getSingleUser = async (req, res) => {
     try {
         //while querying you have to do it like this 
-        const userId = {_id:req.params.id};
-        console.log(userId);
-        const singleUser = await User.findOne(userId);
+        const query = {_id:req.params.id};
+        console.log(query);
+        const singleUser = await User.findOne(query);
         if(!singleUser){
             res.status(400).json({
                 message: "user not found"
@@ -74,10 +74,28 @@ const getSingleUser = async (req, res) => {
     }
 };
 
+const deleteUser = async (req, res) => {
+    try {
+        const query = {_id:req.params.id};
+        console.log(query);
+        const delUser = await User.findByIdAndDelete(query);
+        res.status(200).json({
+            value: "user deleted",
+            message:delUser
+        })
+
+    } catch (error) {
+        res.status(400).json({
+            message: error,
+            value: "user not found"
+        });
+    }
+}
 
 module.exports = {
   hello,
   register,
   getAllUser,
-  getSingleUser
+  getSingleUser,
+  deleteUser
 };

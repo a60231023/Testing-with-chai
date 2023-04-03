@@ -5,4 +5,5 @@ router.get("/home", controller.hello);
 router.post("/register", controller.register);
 router.get("/getAllUser", controller.getAllUser);
 router.get("/getSingleUser/:id", controller.getSingleUser);
+router.delete("/deleteUser/:id", controller.deleteUser);
 module.exports = router;
