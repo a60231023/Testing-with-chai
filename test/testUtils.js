@@ -4,7 +4,7 @@ const API_URL = "http://localhost:8000/";
 const getAllUser = API_URL + "getAllUser";
 const singleUser = API_URL + "getSingleUser";
 const createUser = API_URL + "register";
-
+const deleteUser = API_URL + "deleteUser";
 
 const createUserFunc = async () => {
   const payload = {
@@ -22,4 +22,5 @@ module.exports = {
   singleUser,
   createUser,
   createUserFunc,
+  deleteUser,
 };
