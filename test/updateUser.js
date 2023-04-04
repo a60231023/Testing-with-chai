@@ -6,7 +6,7 @@ const url = require("./testUtils");
 const axios = require("axios");
 
 before(async () => {
-  newUserResponse = await url.createUserFunc();
+  newUserResponse = await url.createUserFuncNormal();
   newUser = newUserResponse.data.user;
 });
 

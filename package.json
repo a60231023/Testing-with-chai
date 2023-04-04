@@ -4,8 +4,9 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "test": "mocha",
+    "test": "mocha 'test'",
     "single": "mocha",
+    "test-report": "mocha 'test' --reporter mochawesome --require mochawesome/register",
     "start": "node app.js",
     "dev": "nodemon app.js"
   },
@@ -30,6 +31,7 @@
   },
   "devDependencies": {
     "chai": "^4.3.7",
-    "mocha": "^10.2.0"
+    "mocha": "^10.2.0",
+    "mochawesome": "^7.1.3"
   }
 }

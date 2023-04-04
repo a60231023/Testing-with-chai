@@ -8,7 +8,7 @@ const axios = require("axios");
 //when we run all the test file getsingleuser test is failing as the delteuser test file is running first and deleting the file and as we are using the same payload to create user but there is doubt we are running before in both the file so it shouldn't create proble but it is so we can use differnt payload or run only signle file at a time.
 
 before(async () => {
-  newUserResponse = await url.createUserFunc();
+  newUserResponse = await url.createUserFuncD();
   newUser = newUserResponse.data.user;
 });
 

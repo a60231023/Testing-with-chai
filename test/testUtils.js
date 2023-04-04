@@ -7,10 +7,10 @@ const createUser = API_URL + "register";
 const deleteUser = API_URL + "deleteUser";
 const updateUser = API_URL + "updateUser"
 
-const createUserFunc = async () => {
+const createUserFuncNormal = async () => {
   const payload = {
-    name: "new user",
-    email: "new@gmail.com",
+    name: "test user",
+    email: "testusergmail.com",
     age: 50,
   };
   const response = await axios.post(createUser, payload);
@@ -18,11 +18,25 @@ const createUserFunc = async () => {
   return response;
 };
 
+const createUserFuncD = async () => {
+  const payload = {
+    name: "delete user",
+    email: "delete@gmail.com",
+    age: 50,
+  };
+  const response = await axios.post(createUser, payload);
+//   console.log(response.data);
+  return response;
+};
+
+
+
 module.exports = {
   getAllUser,
   singleUser,
   createUser,
-  createUserFunc,
+  createUserFuncNormal,
+  createUserFuncD,
   deleteUser,
   updateUser,
 };
