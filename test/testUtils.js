@@ -5,6 +5,7 @@ const getAllUser = API_URL + "getAllUser";
 const singleUser = API_URL + "getSingleUser";
 const createUser = API_URL + "register";
 const deleteUser = API_URL + "deleteUser";
+const updateUser = API_URL + "updateUser"
 
 const createUserFunc = async () => {
   const payload = {
@@ -23,4 +24,5 @@ module.exports = {
   createUser,
   createUserFunc,
   deleteUser,
+  updateUser,
 };

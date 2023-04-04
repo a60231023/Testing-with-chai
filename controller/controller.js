@@ -104,7 +104,7 @@ const updateUser = async (req, res) => {
 
         res.status(200).json({
             message: "user updated",
-            value: updateInfo
+            updatedinfo: updateInfo
         });
     } catch (error) {
         res.status(400).json({
